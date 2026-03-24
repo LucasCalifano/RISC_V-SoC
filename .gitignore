@@ -1,0 +1,7 @@
+*.log
+*.conf
+*.result
+*.oneSearch
+*.oalib
+*.tag
+*.db
