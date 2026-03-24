@@ -1,7 +1,41 @@
+# Synopsys / ICC2 generated files
 *.log
+*.out
+*.jou
+*.str
+*.svf
+*.ems
 *.conf
 *.result
 *.oneSearch
 *.oalib
 *.tag
+
+# Tool run directories / temp data
+work/
+WORK/
+temp/
+tmp/
+logs/
+reports/
+results/
+run/
+
+# Databases / libraries
+*.ddc
 *.db
+*.lib
+*.lef
+*.def
+*.spef
+*.sdf
+*.vcd
+
+# Backup / autosave
+*~
+*.swp
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
