@@ -1,8 +1,8 @@
 ### EEE-5390C: Full Custom VLSI Design
 ### Function: Performing Physical Design in Sky130 Technology
 
-set design_path "/home/net/ma966187/RISC_V-SoC/Project-main/Project-main/riscv_soc_master/soc/"
-set design_name "riscv_soc"
+set design_path "./results/"
+set design_name "riscv_core"
 
 global design_name
 global design_path
@@ -23,6 +23,11 @@ file mkdir ${design_path}
 # Create library (use Sky130 technology file)
 set DESIGN_LIBRARY $design_name
 create_lib $DESIGN_LIBRARY -technology "$SKY130_TECH/sky130_fd_sc_hd.tf"
+set target_library " \
+    /home/net/ma966187/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__ff_n40C_1v95.db \
+    /home/net/ma966187/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__ss_100C_1v60.db \
+    /home/net/ma966187/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__tt_025C_1v80.db"
+
 
 # Reference libraries (Sky130 NDMs)
 set_ref_libs \
@@ -31,7 +36,7 @@ set_ref_libs \
                $SKY130_NDM/sky130_fd_sc_hd__physical_only.ndm"
 
 # Read synthesized netlist
-read_verilog -top $design_name "$design_path$design_file"
+read_verilog -top $design_name "${design_path}${design_file}"
 current_block $design_name
 link_block -force
 save_lib
@@ -48,9 +53,9 @@ set TLUPLUS_MAP_FILE     "/home/net/ma966187/libraries/sky130_fd_sc_hd/tlup/sky1
 
 # Define corners (SS, FF, TT) for Sky130
 set cornerData {
-  {ss_125C_1v60  ss  Cmax     0.99 125 1.60}
+  {ss_100C_1v60  ss  Cmax     0.99 125 1.60}
   {ff_n40C_1v95  ff  Cmin     1.01 -40 1.95}
-  {tt_25C_1v80   tt  nominal  1.00 25  1.80}
+  {tt_025C_1v80  tt  nominal  1.00  25 1.80}
 }
 
 foreach corner_data $cornerData {
@@ -67,9 +72,9 @@ report_corners -verbose
 
 # Define scenarios
 set scenarioData {
-   " .*  ss_125C_1v60    setup false {{-0.02 capture} { 0.02 launch} { 0.02 data}}"
+   " .*  ss_100C_1v60    setup false {{-0.02 capture} { 0.02 launch} { 0.02 data}}"
    " .*  ff_n40C_1v95    hold  false {{0.06 capture} { -0.06 launch} { 0.06 data}}"
-   " .*  tt_25C_1v80     leak  true  {}"
+   " .*  tt_025C_1v80    leak  true  {}"
 }
 
 set mode func
@@ -86,7 +91,7 @@ foreach scenario $scenarioData {
 ## Floorplan ##
 initialize_floorplan -shape R -side_ratio 1.0 -core_utilization 0.50 -core_offset {5 5 5 5}
 
-## Power Network (PDN) – Sky130 Metal Stack
+## Power Network (PDN) – Sky130 Metal Stack (li1, met1–met5)
 remove_pg_via_master_rules -all
 remove_pg_strategy_via_rules -all
 remove_pg_regions -all
@@ -99,32 +104,49 @@ create_net -ground VSS
 connect_pg_net -net VDD [get_pins -physical_context *VPWR]
 connect_pg_net -net VSS [get_pins -physical_context *VGND]
 
-### Power Rings (use top metals M8/M9, adjust widths per Sky130 rules)
-create_pg_ring_pattern ring_pat -horizontal_layer {M9} -horizontal_width 0.18 -horizontal_spacing 0.18 -vertical_layer M8 -vertical_width 0.18 -vertical_spacing 0.18
-set_pg_strategy ring_strat -core -pattern {{name: ring_pat} {nets: {VDD VSS}} {offset: {3 3}}  {parameters: {M9 10 2 M8 10 2 true}}} -extension {{stop: design_boundary}}
+### Power Rings (use top metals met4 and met5)
+# met5 is 1.6 µm wide; met4 is 0.3 µm (increase width for lower IR drop)
+create_pg_ring_pattern ring_pat \
+    -horizontal_layer met5 \
+    -horizontal_width 1.6 \
+    -horizontal_spacing 1.6 \
+    -vertical_layer met4 \
+    -vertical_width 1.0 \
+    -vertical_spacing 1.0
+
+set_pg_strategy ring_strat -core \
+    -pattern {{name: ring_pat} {nets: {VDD VSS}} {offset: {3 3}} {parameters: {met5 10 2 met4 10 2 true}}} \
+    -extension {{stop: design_boundary}}
+
 set_pg_strategy_via_rule ring_strat_via -via_rule { {{intersection: undefined} {via_master: nil}}}
 compile_pg -strategies ring_strat -via_rule ring_strat_via
 
-### Standard Cell Rails (M1)
-create_pg_std_cell_conn_pattern rail_pat_m1 -layers M1 -rail_width 0.096
-set_pg_strategy rail_strat_m1 -core -pattern  { {name: rail_pat_m1} {nets: VDD VSS} }
-set_pg_strategy_via_rule rail_rule_m1 -via_rule { {{intersection: undefined} {via_master: nil}} }
-compile_pg -strategies rail_strat_m1 -via_rule rail_rule_m1
+### Standard Cell Rails (met1)
+# Sky130 standard cells have power rails on met1 (or li1). Use met1 with 0.14 µm width.
+create_pg_std_cell_conn_pattern rail_pat_met1 -layers met1 -rail_width 0.14
+set_pg_strategy rail_strat_met1 -core -pattern {{name: rail_pat_met1} {nets: VDD VSS}}
+set_pg_strategy_via_rule rail_rule_met1 -via_rule { {{intersection: undefined} {via_master: nil}} }
+compile_pg -strategies rail_strat_met1 -via_rule rail_rule_met1
 
-### Power Mesh (M5/M6)
-create_pg_mesh_pattern mesh_pattern -layers {{{vertical_layer: M6} {width: 0.12} {pitch: 50} {offset: 20}} {{horizontal_layer: M5} {width: 0.6} {pitch: 50} {offset: 20}}}
+### Power Mesh (met4 and met5)
+# Use met5 for vertical straps, met4 for horizontal straps.
+create_pg_mesh_pattern mesh_pattern -layers { \
+    {{vertical_layer: met5} {width: 1.6} {pitch: 100} {offset: 20}} \
+    {{horizontal_layer: met4} {width: 1.0} {pitch: 100} {offset: 20}} \
+}
+
 set_pg_strategy mesh_strat -core -pattern {{pattern: mesh_pattern} {nets: {VDD VSS}}} -extension {{stop: outermost_ring}}
 compile_pg -strategies mesh_strat
 associate_mv_cells
 
 ### Pin placement (adjust allowed layers and dimensions for Sky130)
-set_block_pin_constraints -allowed_layers {M3 M4} -pin_spacing 2 -sides {1 3} -width {0.056} -length {0.4} -self -allow_feedthroughs true
+set_block_pin_constraints -allowed_layers {met2 met3} -pin_spacing 2 -sides {1 3} -width 0.14 -length 0.4 -self -allow_feedthroughs true
 place_pins -self
 
 save_block -as floorplan 
 
 ## Placement ##
-current_scenario func@ss_125C_1v60.setup 
+current_scenario func@ss_100C_1v60.setup 
 set_app_options -name place.coarse.continue_on_missing_scandef -value true
 set_app_options -name place_opt.flow.enable_ccd -value false
 place_opt
@@ -133,7 +155,7 @@ report_congestion
 report_utilization
 
 ## Clock-Tree-Synthesis ##
-current_scenario func@ss_125C_1v60.setup
+current_scenario func@ss_100C_1v60.setup
 check_clock_tree
 report_clock_settings
 synthesize_clock_tree -cts_only
