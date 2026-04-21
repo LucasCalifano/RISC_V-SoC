@@ -32,9 +32,9 @@ analyze -format verilog {
 ../riscv_soc_master/soc/dport_bridge.v
 ../riscv_soc_master/soc/gpio_defs.v
 ../riscv_soc_master/soc/gpio.v
+../riscv_soc_master/soc/icache.v
 ../riscv_soc_master/soc/icache_data_ram.v
 ../riscv_soc_master/soc/icache_tag_ram.v
-../riscv_soc_master/soc/icache.v
 ../riscv_soc_master/soc/irq_ctrl_defs.v
 ../riscv_soc_master/soc/irq_ctrl.v
 ../riscv_soc_master/soc/riscv_soc.v
@@ -51,6 +51,9 @@ set top $module
 elaborate -lib work $top
 current_design $top
 link
+####### Protect the SRAM #######
+set sram_instances [get_cells -hierarchical -filter "ref_name =~ *sky130_sram*"]
+set_dont_touch $sram_instances
 
 ####### Design Flattening #######
 #set_flatten true
@@ -62,7 +65,7 @@ source ./ss_1p6v_100c.tcl
 current_design $top
 
 ####### Compile and Optimize ####
-compile_ultra -retime
+compile_ultra -retime -no_autoungroup
 change_names -rule verilog
 group_path -name reg2reg -from [all_registers] -to [all_registers]
 
