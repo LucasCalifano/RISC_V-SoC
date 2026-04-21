@@ -7,8 +7,8 @@ define_design_lib work -path ./WORK
 set target_library "/home/net/ga895622/projectFullCustom/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__ss_100C_1v60.db"
 set link_library "* \
 /home/net/ga895622/projectFullCustom/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__ss_100C_1v60.db \
-/home/net/ga895622/projectFullCustom/libraries/sram/db/sky130_sram_1kbyte_1rw1r_32x256_8.db \
-/home/net/ga895622/projectFullCustom/libraries/sram/db/sky130_sram_2kbyte_1rw1r_32x512_8.db"
+/home/net/ga895622/projectFullCustom/libraries/sky130_fd_sc_hd/db/sky130_sram_1kbyte_1rw1r_32x256_8.db \
+/home/net/ga895622/projectFullCustom/libraries/sky130_fd_sc_hd/db/sky130_sram_2kbyte_1rw1r_32x512_8.db"
 
 ####### Load Design and Elaborate #######
 #analyze -format verilog -autoread ../core/core/rv32imsu/ 
