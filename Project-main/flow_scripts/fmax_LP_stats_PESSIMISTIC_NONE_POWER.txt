@@ -1,0 +1,3 @@
+ Number of variables: 3120
+ Number of constraints: 2975
+ Number of non-zero elements: 9061

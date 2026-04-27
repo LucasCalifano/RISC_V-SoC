@@ -1,0 +1,77 @@
+
+                              Library Manager (TM)
+
+             Version U-2022.12-SP6 for linux64 - Aug 25, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+#================================================================
+# build_ndm.tcl
+# Run with: icc2_lm_shell -f build_ndm.tcl | tee build_ndm.log
+#================================================================
+set PDK      /home/net/ah476548/libraries/sky130_fd_sc_hd
+/home/net/ah476548/libraries/sky130_fd_sc_hd
+set PDK_TOOL /home/net/ah476548/pdk
+/home/net/ah476548/pdk
+puts "============================================"
+============================================
+puts " NDM Build Script"
+ NDM Build Script
+puts "============================================"
+============================================
+puts ""
+
+# Pre-flight checks
+foreach f [list \
+
+    ${PDK}/techlef/sky130_fd_sc_hd__nom.tlef \
+
+    ${PDK}/lef/sky130_fd_sc_hd.lef \
+
+    ${PDK_TOOL}/db/sky130_fd_sc_hd__ss_100C_1v60.db \
+
+    ${PDK_TOOL}/db/sky130_fd_sc_hd__ff_n40C_1v95.db \
+
+    ${PDK_TOOL}/db/sky130_fd_sc_hd__tt_025C_1v80.db \
+
+    ${PDK_TOOL}/tf/sky130_icc2.tf] {
+
+    if {[file exists $f]} {
+
+        puts "OK:      $f"
+
+    } else {
+
+        puts "MISSING: $f"
+
+        exit 1
+
+    }
+
+}
+Error: unknown command '/home/net/ah476548/libraries/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef' (CMD-005)
+Information: script '/home/net/ah476548/scripts/build_ndm.tcl'
+	stopped at line 26 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"${PDK}/techlef/sky130_fd_sc_hd__nom.tlef \
+"
+    (file "/home/net/ah476548/scripts/build_ndm.tcl" line 26)
+ -- End Extended Error Info
+lm_shell> 

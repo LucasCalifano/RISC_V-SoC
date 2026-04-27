@@ -1,0 +1,17 @@
+<Database>
+Name/home/net/lu282362/final_project/Project-main/flow_scripts/check_workspace.ems
+Creation TimeSun Apr 26 19:44:54 2026
+Modified TimeSun Apr 26 19:44:54 2026
+Design Name
+Library Name
+</Database>
+<RuleCount>
+LM-0051
+LM-0341
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+LM-005
+LM-034para1110para210para31 with a design view (1 had ports reordered);10
+</Messages>

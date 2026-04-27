@@ -1,0 +1,108 @@
+ 
+                              Library Manager (TM)
+
+             Version T-2022.03-SP2 for linux64 - May 31, 2022 -SLE
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Warning: Cannot use command line editor for terminal type 'xterm-256color'. (CLE-100)
+set search_path {. ./results/ .}
+. ./results/ .
+setenv RUN_RESULT /tmp/.tARL656136/_rrY69Omh
+/tmp/.tARL656136/_rrY69Omh
+set_current_mismatch_config auto_fix
+1
+set_app_options -name lib.workspace.build_script -value CLIBs/.scripts/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.tcl
+lib.workspace.build_script CLIBs/.scripts/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.tcl
+#suppress_messages
+source -echo -verbose CLIBs/.scripts/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.tcl
+set NDM_LIBS {}
+set FRAME_LIBS {}
+set LEF_FILES {/home/net/lu282362/final_project/libraries/new_files/sky130_sram_2kbyte_1rw1r_32x512_8.lef}
+/home/net/lu282362/final_project/libraries/new_files/sky130_sram_2kbyte_1rw1r_32x512_8.lef
+set DB_FILES {/home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_2kbyte_1rw1r_32x512_8.db}
+/home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_2kbyte_1rw1r_32x512_8.db
+set TECH_FILE "/tmp/.tARL656136/_techBqOtmD"
+/tmp/.tARL656136/_techBqOtmD
+set_app_options -name lib.workspace.create_cached_lib -value true
+lib.workspace.create_cached_lib true
+#suppress_messages
+set_app_options -name lib.workspace.allow_read_aggregate_lib -value true
+lib.workspace.allow_read_aggregate_lib true
+create_workspace sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib -technology $TECH_FILE -scale_factor 10000
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 943) (TECH-026)
+Warning: Layer 'via4/met4' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 943) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 950) (TECH-026)
+Warning: Layer 'via4/met5' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 950) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 957) (TECH-026)
+Warning: Layer 'via3/met3' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 957) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 964) (TECH-026)
+Warning: Layer 'via3/met4' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 964) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 971) (TECH-026)
+Warning: Layer 'via2/met2' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 971) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 978) (TECH-026)
+Warning: Layer 'via2/met3' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 978) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 985) (TECH-026)
+Warning: Layer 'via/met1' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 985) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 992) (TECH-026)
+Warning: Layer 'via/met2' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 992) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 999) (TECH-026)
+Warning: Layer 'mcon/li1' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 999) (TECH-026)
+Warning: Section DesignRule '' is missing the attribute 'stackable'. (_techBqOtmD line 1006) (TECH-026)
+Warning: Layer 'mcon/met1' is missing the attribute 'maxStackLevel'. (_techBqOtmD line 1006) (TECH-026)
+Warning: DesignRule is defined with non-consecutive layers 'via4' and 'met4'. (_techBqOtmD line 948) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via4' and 'met5'. (_techBqOtmD line 955) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via3' and 'met3'. (_techBqOtmD line 962) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via3' and 'met4'. (_techBqOtmD line 969) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via2' and 'met2'. (_techBqOtmD line 976) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via2' and 'met3'. (_techBqOtmD line 983) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via' and 'met1'. (_techBqOtmD line 990) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'via' and 'met2'. (_techBqOtmD line 997) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'mcon' and 'li1'. (_techBqOtmD line 1004) (TECH-034)
+Warning: DesignRule is defined with non-consecutive layers 'mcon' and 'met1'. (_techBqOtmD line 1011) (TECH-034)
+Information: Loading technology file '/tmp/.tARL656136/_techBqOtmD' (FILE-007)
+... created workspace sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib
+read_lef $LEF_FILES
+Information: The default value of lib.workspace.library_developer_mode will be 'true' in future release. (LMUI-054)
+Information: Loading LEF file '/home/net/lu282362/final_project/libraries/new_files/sky130_sram_2kbyte_1rw1r_32x512_8.lef' (FILE-007)
+Information: Read LEF into a new library 'sky130_sram_2kbyte_1rw1r_32x512_8'. (LEFR-022)
+{sky130_sram_2kbyte_1rw1r_32x512_8}
+read_db $DB_FILES
+Information: Loading db file '/home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_2kbyte_1rw1r_32x512_8.db' (FILE-007)
+{sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib}
+process_workspaces -check_options {-allow_missing} -force -directory CLIBs -output sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.ndm
+Checking libraries...
+Information: Only one logical library loaded - internal checks only (LM-005)
+Using sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib as the base library.
+Information: Combined 1 physical design:1 with a design view (1 had ports reordered); (LM-034)
+... creating frames for sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib
+Information: Block sky130_sram_2kbyte_1rw1r_32x512_8.frame, the feature of blocking core area is set on specific layers. New zero-spacing routing blockages and RC metal are added on layers: met1 met2 met3 met4. (FRAM-045)
+Information: Block sky130_sram_2kbyte_1rw1r_32x512_8.frame, the feature of blockage trimming by pin is set to 'touch' on specific layers. All metal shapes and routing blockages touch pins in design view are trimmed on layers: li1 met1 met2 met3 met4 met5 fieldpoly diff nwell pwell. (FRAM-046)
+... created 1 frames
+
+Workspace check succeeded!
+... wrote CLIBs/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.ndm
+... removing library 'sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib'
+... removing library 'sky130_sram_2kbyte_1rw1r_32x512_8'
+... lib workspace removed!
+
+Warning: EMS database "check_workspace.ems" already exists, over-writing it. (EMS-040)
+Maximum memory usage for this session: 112.66 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      1 seconds (  0.00 hours)
+Thank you for using Library Manager.
+

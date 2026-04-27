@@ -1,0 +1,66 @@
+ 
+                              Library Manager (TM)
+
+             Version T-2022.03-SP2 for linux64 - May 31, 2022 -SLE
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Warning: Cannot use command line editor for terminal type 'xterm-256color'. (CLE-100)
+set search_path {. ./results/ .}
+. ./results/ .
+setenv RUN_RESULT /tmp/.tARL656136/_rrCjCFTu
+/tmp/.tARL656136/_rrCjCFTu
+set_current_mismatch_config auto_fix
+1
+set_app_options -name lib.workspace.build_script -value CLIBs/.scripts/EXPLORE_macros.tcl
+lib.workspace.build_script CLIBs/.scripts/EXPLORE_macros.tcl
+#suppress_messages
+source -echo -verbose CLIBs/.scripts/EXPLORE_macros.tcl
+set NDM_LIBS {CLIBs/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib.ndm CLIBs/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.ndm}
+CLIBs/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib.ndm CLIBs/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.ndm
+set FRAME_LIBS {}
+set LEF_FILES {}
+set DB_FILES {}
+set TECH_FILE "/tmp/.tARL656136/_techBqOtmD"
+/tmp/.tARL656136/_techBqOtmD
+set_app_options -name lib.workspace.create_cached_lib -value true
+lib.workspace.create_cached_lib true
+#suppress_messages
+set_app_options -name lib.workspace.allow_read_aggregate_lib -value true
+lib.workspace.allow_read_aggregate_lib true
+create_workspace EXPLORE_macros -flow aggregate -scale_factor 10000
+...created workspace EXPLORE_macros in aggregate flow
+foreach ndm_lib $NDM_LIBS {
+  read_ndm $ndm_lib
+}
+Information: Loading library file '/home/net/lu282362/final_project/Project-main/flow_scripts/CLIBs/sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib.ndm' (FILE-007)
+Information: Library 'sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib' has been added to the aggregate library. (LIB-043)
+Information: Loading library file '/home/net/lu282362/final_project/Project-main/flow_scripts/CLIBs/sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib.ndm' (FILE-007)
+Information: Library 'sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib' has been added to the aggregate library. (LIB-043)
+process_workspaces -check_options {-allow_missing} -force -directory CLIBs -output EXPLORE_macros.ndm
+Checking libraries...
+
+Workspace check succeeded!
+... wrote CLIBs/EXPLORE_macros.ndm
+... removing library 'EXPLORE_macros|sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib'
+... removing library 'EXPLORE_macros|sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib'
+... lib workspace removed!
+Maximum memory usage for this session: 98.56 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      1 seconds (  0.00 hours)
+Thank you for using Library Manager.
+

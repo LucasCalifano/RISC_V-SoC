@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_soc_dppinassgn.err" designName="riscv_soc" info="" checker="Pin Placement Check" checkerVersion="" created="1777247437" createdDate="04:26:2026:19:50:37:EDT" modified="1777247440" modifiedDate="04:26:2026:19:50:40:EDT" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

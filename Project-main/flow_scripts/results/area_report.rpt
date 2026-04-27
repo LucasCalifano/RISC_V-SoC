@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : riscv_soc
+Version: U-2022.12-SP6
+Date   : Sun Apr 26 19:29:24 2026
+****************************************
+
+Library(s) Used:
+
+    sky130_fd_sc_hd__ss_100C_1v60 (File: /home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__ss_100C_1v60.db)
+    sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib (File: /home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_2kbyte_1rw1r_32x512_8.db)
+    sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib (File: /home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_1kbyte_1rw1r_32x256_8.db)
+
+Number of ports:                        10455
+Number of nets:                         40203
+Number of cells:                        32222
+Number of combinational cells:          28162
+Number of sequential cells:              4011
+Number of macros/black boxes:              10
+Number of buf/inv:                       5613
+Number of references:                       4
+
+Combinational area:             165095.836704
+Buf/Inv area:                    23954.223411
+Noncombinational area:           97224.496080
+Macro/Black Box area:          2657732.843750
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               2920053.176534
+Total area:                 undefined
+1
