@@ -1,0 +1,52 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : riscv_soc
+Version: T-2022.03-SP2
+Date   : Mon Apr 27 01:44:44 2026
+****************************************
+Information: Activity for scenario func@ss_100C_1v60.setup was cached, no propagation required. (POW-005)
+Mode: func
+Corner: ss_100C_1v60
+Scenario: func@ss_100C_1v60.setup
+Voltage: 1.60
+Temperature: 100.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1nW
+Leakage Power Unit   : 1nW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Rise-Fall toggles on pin HFSBUF_32_171/X are impossible given input states; converted to zero toggles. (POW-069)
+
+  Cell Internal Power    = 9.39e+07 nW ( 89.0%)
+  Net Switching Power    = 1.16e+07 nW ( 11.0%)
+Total Dynamic Power      = 1.06e+08 nW (100.0%)
+
+Cell Leakage Power       = 3.85e+05 nW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    7.41e+07               5.59e+04               1.61e+05               7.43e+07    ( 70.2%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.90e+07               7.77e+06               1.31e+03               2.67e+07    ( 25.3%)         
+register                  9.98e+04               2.11e+05               7.29e+04               3.84e+05    (  0.4%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             7.75e+05               3.53e+06               1.50e+05               4.46e+06    (  4.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     9.39e+07 nW            1.16e+07 nW            3.85e+05 nW            1.06e+08 nW
+1

@@ -1,0 +1,15 @@
+****************************************
+Report : congestion
+Design : riscv_soc
+Version: T-2022.03-SP2
+Date   : Mon Apr 27 01:44:42 2026
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |  120475 |     6 |   80150  ( 2.97%) |      16
+H routing |    7675 |     5 |    6698  ( 0.50%) |       2
+V routing |  112800 |     6 |   73452  ( 5.45%) |      16
+
+1

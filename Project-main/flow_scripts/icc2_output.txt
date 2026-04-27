@@ -30065,4 +30065,107 @@ Warning: The user specified view ' layout' for lib-cell 'sky130_fd_sc_hd__and4bb
 Warning: The user specified view ' layout' for lib-cell 'sky130_fd_sc_hd__a2111o_1' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'sky130_fd_sc_hd__o21ba_1' is not available. (GDS-034)
 1
+icc2_shell> pwd
+/home/net/lu282362/final_project/Project-main/flow_scripts
+icc2_shell> report_timing -group reg2reg -max_paths 100 -path_type full_clock_expanded > ./results/postlayout_timing_report.rpt
+icc2_shell> report_power > ./results/power_report.rpt
+icc2_shell> report_congestion > ./results/congestion.rpt
+icc2_shell> report_utilization > ./results/utilization.rpt
+icc2_shell> report_congestion > ./results_2/congestion_pd.rpt
+icc2_shell> report_utilization > ./results_2/utilization_pd.rpt
+icc2_shell> report_timing -delay_type max -max_paths 10 > ./results_2/setup_timing_after_route_pd.rpt
+icc2_shell> report_timing -delay_type min -max_paths 10 > ./results_2/hold_timing_after_route_pd.rpt
+icc2_shell> report_timing -group reg2reg -max_paths 100 -path_type full_clock_expanded > ./results_2/postlayout_timing_pd.rpt
+icc2_shell> report_qor > ./results_2/qor_report.rpt
+icc2_shell> report_power > ./results_2/power_pd.rpt
+icc2_shell> report_area > ./results_2/area_pd.rpt
+Error: Command 'report_area' is disabled. (CMD-080)
+icc2_shell> report_area > ./results_2/area_pd.rpt
+Error: Command 'report_area' is disabled. (CMD-080)
+icc2_shell> report_area -hierarchy > ./results_2/area_pd.rpt
+Error: Command 'report_area' is disabled. (CMD-080)
+icc2_shell> report_clock_qor > ./results_2/cts_qor_pd.rpt
+icc2_shell> report_clock_settings > ./results_2/clock_settings_pd.rpt
+icc2_shell> check_routes -reports {all} > ./results_2/drc_report.rpt
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> check_routes -reports {all} > ./results_2/drc_report.rpt
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> check_routes -output ./results_2/drc_report.rpt
+Error: unknown option '-output' (CMD-010)
+Error: extra positional option './results_2/drc_report.rpt' (CMD-012)
+icc2_shell> # ICC2 uses a specific flag for the report file name
+icc2_shell> check_lvs -report_file ./results_2/lvs_report.rpt
+Error: unknown option '-report_file' (CMD-010)
+Error: extra positional option './results_2/lvs_report.rpt' (CMD-012)
+icc2_shell> check_lvs -report_file ./results_2/lvs_report.rpt
+Error: unknown option '-report_file' (CMD-010)
+Error: extra positional option './results_2/lvs_report.rpt' (CMD-012)
+icc2_shell> check_lvs > ./results_2/lvs_report.rpt
+icc2_shell> check_drc -report_file ./results_2/drc_report.rpt
+Error: unknown command 'check_drc' (CMD-005)
+icc2_shell> check_routes -reports {all} -output ./results_2/drc_report.rpt
+Error: unknown option '-reports' (CMD-010)
+Error: extra positional option 'all' (CMD-012)
+Error: unknown option '-output' (CMD-010)
+Error: extra positional option './results_2/drc_report.rpt' (CMD-012)
+icc2_shell> redirect ./results_2/drc_report.rpt { check_routes -reports {all} }
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> # 1. Open a new log file specifically for DRC
+icc2_shell> set_app_var log_file ./results_2/drc_report.rpt
+Error: Variable 'log_file' is not an application variable. Using Tcl global variable. (CMD-104)
+./results_2/drc_report.rpt
+icc2_shell> 
+icc2_shell> # 2. Run the command (the output will go to the screen AND the log file)
+icc2_shell> check_routes -reports {all}
+Error: unknown option '-reports' (CMD-010)
+Error: extra positional option 'all' (CMD-012)
+icc2_shell> 
+icc2_shell> # 3. Close the log file to save it
+icc2_shell> set_app_var log_file ""
+Error: Variable 'log_file' is not an application variable. Using Tcl global variable. (CMD-104)
+icc2_shell> set_app_var log_file ""
+Error: Variable 'log_file' is not an application variable. Using Tcl global variable. (CMD-104)
+icc2_shell> # Try writing to the current folder with no sub-directories
+icc2_shell> redirect drc_final.rpt { check_routes -reports {all} }
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> # Try writing to the current folder with no sub-directories
+icc2_shell> 
+icc2_shell> redirect drc_final.rpt { check_routes -reports {all} }
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> report_area > ./results_2/area_pd.rpt
+Error: Command 'report_area' is disabled. (CMD-080)
+icc2_shell> report_design -summary -output ./results_2/area_pd.rpt
+Error: unknown option '-output' (CMD-010)
+Error: extra positional option './results_2/area_pd.rpt' (CMD-012)
+icc2_shell> redirect ./results_2/area_pd.rpt { report_qor }
+icc2_shell> report_design -summary -hierarchy > ./results_2/area_hierarchy_pd.rpt
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> elaborate riscv_soc
+Error: Command 'elaborate' is disabled. (CMD-080)
+icc2_shell> report_area
+Error: Command 'report_area' is disabled. (CMD-080)
+icc2_shell> link
+Information: The command 'link_block' cleared the undo history. (UNDO-016)
+Warning: Block 'riscv_soc:riscv_soc.design' is already linked. (LNK-067)
+0
+icc2_shell> report_design -summary -hierarchy > ./results_2/area_pd.rpt
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> current_design riscv_soc
+{riscv_soc:riscv_soc.design}
+icc2_shell> linkreport_utilization -hierarchy > ./results_2/area_util_report.rpt
+Error: unknown command 'linkreport_utilization' (CMD-005)
+icc2_shell> report_design -summary -hierarchy > hierarchical_area.txt
+Error: Errors detected during redirect
+        Use error_info for more info. (CMD-013)
+icc2_shell> report_design -summary -hierarchy
+Error: unknown option '-hierarchy' (CMD-010)
+icc2_shell> chmod -R 777 ./results_2
+Error: unknown command 'chmod' (CMD-005)
 icc2_shell> 

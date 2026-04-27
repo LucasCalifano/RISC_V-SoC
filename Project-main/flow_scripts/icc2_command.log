@@ -13,3 +13,54 @@ write_parasitics -output "./${design_name}.pd.spef"
 write_sdc -output "./results/${design_name}.pd.sdc"
 write_def "./results/${design_name}.pd.def"
 write_gds "./results/${design_name}.pd.gds" -hierarchy all -merge_gds_top_cell $design_name
+pwd
+report_timing -group reg2reg -max_paths 100 -path_type full_clock_expanded > ./results/postlayout_timing_report.rpt
+report_power > ./results/power_report.rpt
+report_congestion > ./results/congestion.rpt
+report_utilization > ./results/utilization.rpt
+report_congestion > ./results_2/congestion_pd.rpt
+report_utilization > ./results_2/utilization_pd.rpt
+report_timing -delay_type max -max_paths 10 > ./results_2/setup_timing_after_route_pd.rpt
+report_timing -delay_type min -max_paths 10 > ./results_2/hold_timing_after_route_pd.rpt
+report_timing -group reg2reg -max_paths 100 -path_type full_clock_expanded > ./results_2/postlayout_timing_pd.rpt
+report_qor > ./results_2/qor_report.rpt
+report_power > ./results_2/power_pd.rpt
+report_area > ./results_2/area_pd.rpt
+report_area > ./results_2/area_pd.rpt
+report_area -hierarchy > ./results_2/area_pd.rpt
+report_clock_qor > ./results_2/cts_qor_pd.rpt
+report_clock_settings > ./results_2/clock_settings_pd.rpt
+check_routes -reports {all} > ./results_2/drc_report.rpt
+check_routes -reports {all} > ./results_2/drc_report.rpt
+check_routes -output ./results_2/drc_report.rpt
+# ICC2 uses a specific flag for the report file name
+check_lvs -report_file ./results_2/lvs_report.rpt
+check_lvs -report_file ./results_2/lvs_report.rpt
+check_lvs > ./results_2/lvs_report.rpt
+check_drc -report_file ./results_2/drc_report.rpt
+check_routes -reports {all} -output ./results_2/drc_report.rpt
+redirect ./results_2/drc_report.rpt { check_routes -reports {all} }
+# 1. Open a new log file specifically for DRC
+set_app_var log_file ./results_2/drc_report.rpt
+# 2. Run the command (the output will go to the screen AND the log file)
+check_routes -reports {all}
+# 3. Close the log file to save it
+set_app_var log_file ""
+set_app_var log_file ""
+# Try writing to the current folder with no sub-directories
+redirect drc_final.rpt { check_routes -reports {all} }
+# Try writing to the current folder with no sub-directories
+redirect drc_final.rpt { check_routes -reports {all} }
+report_area > ./results_2/area_pd.rpt
+report_design -summary -output ./results_2/area_pd.rpt
+redirect ./results_2/area_pd.rpt { report_qor }
+report_design -summary -hierarchy > ./results_2/area_hierarchy_pd.rpt
+elaborate riscv_soc
+report_area
+link
+report_design -summary -hierarchy > ./results_2/area_pd.rpt
+current_design riscv_soc
+linkreport_utilization -hierarchy > ./results_2/area_util_report.rpt
+report_design -summary -hierarchy > hierarchical_area.txt
+report_design -summary -hierarchy
+chmod -R 777 ./results_2

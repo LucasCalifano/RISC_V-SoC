@@ -1,64 +1,68 @@
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated primary inputs. (PWR-414)
-Warning: Design has unannotated sequential cell outputs. (PWR-415)
-Warning: Design has unannotated black box outputs. (PWR-428)
- 
 ****************************************
 Report : power
-        -analysis_effort low
+        -significant_digits 2
 Design : riscv_soc
-Version: U-2022.12-SP6
-Date   : Sun Apr 26 19:29:24 2026
+Version: T-2022.03-SP2
+Date   : Mon Apr 27 01:35:01 2026
 ****************************************
+Information: Activity propagation will be performed for scenario func@ss_100C_1v60.setup.
+Information: Doing activity propagation for mode 'func' and corner 'ss_100C_1v60' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario func@ss_100C_1v60.setup (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: func
+Corner: ss_100C_1v60
+Scenario: func@ss_100C_1v60.setup
+Voltage: 1.60
+Temperature: 100.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1nW
+Leakage Power Unit   : 1nW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port COUT on cell u_core/u_core/u_csr/U34 for parameter Cout. Lowest table value = 0.000500, highest table value = 0.341807, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk0 on cell u_core/u_icache/u_tag0/u_sram for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.293655 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk0 on cell u_core/u_icache/u_tag0/u_sram for parameter Cout. Lowest table value = inf, highest table value = inf, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk1 on cell u_core/u_icache/u_tag0/u_sram for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.574188 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk1 on cell u_core/u_icache/u_tag0/u_sram for parameter Cout. Lowest table value = inf, highest table value = inf, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk0 on cell u_core/u_icache/u_tag1/u_sram for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.293655 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk0 on cell u_core/u_icache/u_tag1/u_sram for parameter Cout. Lowest table value = inf, highest table value = inf, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk1 on cell u_core/u_icache/u_tag1/u_sram for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.574188 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk1 on cell u_core/u_icache/u_tag1/u_sram for parameter Cout. Lowest table value = inf, highest table value = inf, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port clk0 on cell u_core/u_icache/u_data0/u_bank0 for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.250340 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+Warning: Rise-Fall toggles on pin HFSBUF_32_171/X are impossible given input states; converted to zero toggles. (POW-069)
+
+  Cell Internal Power    = 9.39e+07 nW ( 89.0%)
+  Net Switching Power    = 1.16e+07 nW ( 11.0%)
+Total Dynamic Power      = 1.06e+08 nW (100.0%)
+
+Cell Leakage Power       = 3.85e+05 nW
 
 
-Library(s) Used:
+  Attributes
+  ----------
+      u  -  User defined power group
 
-    sky130_fd_sc_hd__ss_100C_1v60 (File: /home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_fd_sc_hd__ss_100C_1v60.db)
-    sky130_sram_2kbyte_1rw1r_32x512_8_TT_1p8V_25C_lib (File: /home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_2kbyte_1rw1r_32x512_8.db)
-    sky130_sram_1kbyte_1rw1r_32x256_8_TT_1p8V_25C_lib (File: /home/net/lu282362/final_project/libraries/sky130_fd_sc_hd/db/sky130_sram_1kbyte_1rw1r_32x256_8.db)
-
-
-Operating Conditions: ss_100C_1v60   Library: sky130_fd_sc_hd__ss_100C_1v60
-Wire Load Model Mode: top
-
-Design        Wire Load Model            Library
-------------------------------------------------
-riscv_soc              Small             sky130_fd_sc_hd__ss_100C_1v60
-
-
-Global Operating Voltage = 1.6  
-Power-specific unit information :
-    Voltage Units = 1V
-    Capacitance Units = 1.000000pf
-    Time Units = 1ns
-    Dynamic Power Units = 1mW    (derived from V,C,T units)
-    Leakage Power Units = 1nW
-
-
-Attributes
-----------
-i - Including register clock pin internal power
-
-
-  Cell Internal Power  =  93.6060 mW   (99%)
-  Net Switching Power  = 813.7768 uW    (1%)
-                         ---------
-Total Dynamic Power    =  94.4198 mW  (100%)
-
-Cell Leakage Power     = 309.6491 uW
-
-
-                 Internal         Switching           Leakage            Total
-Power Group      Power            Power               Power              Power   (   %    )  Attrs
---------------------------------------------------------------------------------------------------
-io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-memory            74.0835        1.7259e-02        1.6084e+05           74.2616  (  78.39%)
-black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network     19.0334            0.0000            0.0000           19.0334  (  20.09%)  i
-register       9.7389e-02        7.6640e-02        7.0879e+04            0.2449  (   0.26%)
-sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.3924            0.7199        7.7930e+04            1.1902  (   1.26%)
---------------------------------------------------------------------------------------------------
-Total             93.6066 mW         0.8138 mW     3.0965e+05 nW        94.7301 mW
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    7.41e+07               5.59e+04               1.61e+05               7.43e+07    ( 70.2%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.90e+07               7.77e+06               1.31e+03               2.67e+07    ( 25.3%)         
+register                  9.98e+04               2.11e+05               7.29e+04               3.84e+05    (  0.4%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             7.75e+05               3.53e+06               1.50e+05               4.46e+06    (  4.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     9.39e+07 nW            1.16e+07 nW            3.85e+05 nW            1.06e+08 nW
 1

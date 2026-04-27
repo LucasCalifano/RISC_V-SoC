@@ -1,0 +1,106 @@
+Information: Using 1 threads for LVS
+[Check Short] Stage 1	Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 1-2	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Short] Stage 2	Elapsed =    0:00:01, CPU =    0:00:01
+Detected more than 20 short violations. Skip checking short violations
+[Check Short] Stage 3	Elapsed =    0:00:03, CPU =    0:00:03
+[Check Short] End	Elapsed =    0:00:03, CPU =    0:00:03
+[Check Net] Init	Elapsed =    0:00:03, CPU =    0:00:03
+Warning: Port VDD have no valid pin shapes. Skip this port. (RT-203)
+Information: Detected short violation. Net1: ZINV_786_108. Net2: axi4_i_araddr_w[26]. BBox: (386.6100 179.0100)(387.7900 179.2700). Layer: met4. (RT-586)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 612.8900)(200.0000 613.0300). (RT-587)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n162. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8350)(200.3600 250.0200). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n161. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8350)(200.3600 250.0200). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n106. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8350)(200.3600 250.0200). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n105. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8350)(200.3600 250.0200). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n107. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8350)(200.3600 250.0200). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n108. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8350)(200.3600 250.0200). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n107. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8500)(200.1500 250.1500). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n162. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.8500)(200.3500 250.1500). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n163. Net2: u_core/u_icache/u_data1/n164. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n162. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n161. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n106. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n105. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n107. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n108. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.6400)(200.3600 249.7050). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n108. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.3900)(200.1500 249.6900). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n106. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.3900)(200.3500 249.6900). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data0/n105. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.3900)(200.1500 249.6900). Layer: met3. (RT-586)
+Information: Detected short violation. Net1: u_core/u_icache/u_data1/n161. Net2: u_core/u_icache/u_data1/n163. BBox: (200.0300 249.3900)(200.1500 249.6900). Layer: met3. (RT-586)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 607.4500)(200.0000 607.5900). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 493.2100)(200.0000 493.3500). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 504.0900)(200.0000 504.2300). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 509.5300)(200.0000 509.6700). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 514.9700)(200.0000 515.1100). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 520.4100)(200.0000 520.5500). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 525.8500)(200.0000 525.9900). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 531.2900)(200.0000 531.4300). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 536.7300)(200.0000 536.8700). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 542.1700)(200.0000 542.3100). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 547.6100)(200.0000 547.7500). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 553.0500)(200.0000 553.1900). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 558.4900)(200.0000 558.6300). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 563.9300)(200.0000 564.0700). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 569.3700)(200.0000 569.5100). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 574.8100)(200.0000 574.9500). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 580.2500)(200.0000 580.3900). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 585.6900)(200.0000 585.8300). (RT-587)
+Information: Detected floating route violation for Net VDD. BBox: (20.0000 591.1300)(200.0000 591.2700). (RT-587)
+Detected more than 20 floating route violations. Skip checking floating route violations.
+Warning: Port VSS have no valid pin shapes. Skip this port. (RT-203)
+[Check Net] 10% 	Elapsed =    0:00:05, CPU =    0:00:05
+[Check Net] 20% 	Elapsed =    0:00:06, CPU =    0:00:06
+[Check Net] 30% 	Elapsed =    0:00:07, CPU =    0:00:07
+[Check Net] 40% 	Elapsed =    0:00:07, CPU =    0:00:07
+[Check Net] 50% 	Elapsed =    0:00:07, CPU =    0:00:07
+[Check Net] 60% 	Elapsed =    0:00:08, CPU =    0:00:08
+[Check Net] 70% 	Elapsed =    0:00:08, CPU =    0:00:08
+[Check Net] 80% 	Elapsed =    0:00:09, CPU =    0:00:08
+[Check Net] 90% 	Elapsed =    0:00:09, CPU =    0:00:09
+Warning: Net mem_bid_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net mem_bid_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net mem_rid_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net mem_rid_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__0 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__1 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__2 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__3 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__4 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__5 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__6 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__7 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__8 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__9 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__10 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag0/SYNOPSYS_UNCONNECTED__11 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__0 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__1 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__2 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__3 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__4 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__5 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__6 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__7 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__8 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__9 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__10 has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net u_core/u_icache/u_tag1/SYNOPSYS_UNCONNECTED__11 has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] All nets are submitted.
+[Check Net] 100%	Elapsed =    0:00:09, CPU =    0:00:09
+Information: Detected open violation for Net VSS. BBox: (0.0000 0.0000)(3159.7200 3159.8400). (RT-585)
+Information: Detected open violation for Net VDD. BBox: (0.0000 0.0000)(3159.7200 3159.8400). (RT-585)
+
+===============================================================
+    Maximum number of violations is set to 20
+    Abort checking when more than 20 violations are found
+    All violations might not be found.
+===============================================================
+Total number of input nets is 40947.
+Total number of short violations is 20.
+Total number of open nets is 2.
+Open nets are VDD VSS 
+Total number of floating route violations is 20.
+
+Elapsed =    0:00:09, CPU =    0:00:09
+1

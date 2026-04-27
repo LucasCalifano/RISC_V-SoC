@@ -1,0 +1,1301 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -report_by design
+Design : riscv_soc
+Version: T-2022.03-SP2
+Date   : Mon Apr 27 01:44:43 2026
+****************************************
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[22] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_mmu/pte_entry_q_reg[13] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.65      1.65
+
+  u_core/u_core/u_decode/inst_q_reg[22]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.65 r
+  u_core/u_core/u_decode/inst_q_reg[22]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.93      2.58 f
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_2772/X (sky130_fd_sc_hd__clkbuf_1)
+                                                   0.24      2.82 f
+  u_core/u_core/u_decode/u_regfile/HFSINV_1102_2396/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.30      3.12 r
+  u_core/u_core/u_decode/u_regfile/U842/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.19      3.31 f
+  u_core/u_core/u_decode/u_regfile/U856/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.22      3.54 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_3_14802/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.15      3.69 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.20      3.88 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.21      4.09 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_10_73395/Y (sky130_fd_sc_hd__nand2_2)
+                                                   1.43      5.52 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_9_73394/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.20      5.71 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_8_73393/Y (sky130_fd_sc_hd__a21oi_1)
+                                                   0.49      6.20 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_73386/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.57      6.77 f
+  u_core/u_core/u_decode/u_regfile/U1687/Y (sky130_fd_sc_hd__nor2_8)
+                                                   0.67      7.44 r
+  u_core/u_core/u_decode/u_regfile/U1688/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.44      7.88 f
+  u_core/u_core/u_decode/ctmTdsLR_2_81123/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.28      8.16 r
+  u_core/u_core/u_decode/ctmTdsLR_1_81122/Y (sky130_fd_sc_hd__nand3_2)
+                                                   0.22      8.38 f
+  u_core/u_core/ZBUF_105_inst_3549/X (sky130_fd_sc_hd__buf_6)
+                                                   0.39      8.77 f
+  u_core/u_core/u_exec/ctmTdsLR_2_65726/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.26      9.03 r
+  u_core/u_core/u_exec/ctmTdsLR_1_65725/Y (sky130_fd_sc_hd__o21ai_1)
+                                                   0.21      9.23 f
+  u_core/u_core/u_exec/ctmTdsLR_1_83234/Y (sky130_fd_sc_hd__a21oi_2)
+                                                   0.32      9.55 r
+  u_core/u_core/u_exec/ctmTdsLR_2_83235/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.17      9.73 f
+  u_core/u_core/u_exec/ctmTdsLR_1_13975/Y (sky130_fd_sc_hd__a21oi_2)
+                                                   0.27     10.00 r
+  u_core/u_core/u_exec/ctmTdsLR_1_81605/Y (sky130_fd_sc_hd__o211ai_2)
+                                                   0.28     10.27 f
+  u_core/u_core/u_exec/ctmTdsLR_3_79684/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     10.43 r
+  u_core/u_core/u_exec/ctmTdsLR_1_79682/Y (sky130_fd_sc_hd__nand3_2)
+                                                   0.17     10.60 f
+  u_core/u_core/u_exec/ctmTdsLR_2_80842/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     10.71 r
+  u_core/u_core/u_exec/ctmTdsLR_1_80841/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     10.83 f
+  u_core/u_core/u_exec/ctmTdsLR_1_61235/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.12     10.95 r
+  u_core/u_core/u_decode/ctmTdsLR_2_60974/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.10     11.06 f
+  u_core/u_core/u_decode/ctmTdsLR_1_60973/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.14     11.20 r
+  u_core/u_core/u_fetch/ctmTdsLR_2_25727/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.18     11.38 f
+  u_core/u_core/u_fetch/ctmTdsLR_1_25726/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.17     11.56 r
+  u_core/u_core/u_fetch/U90/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.19     11.75 f
+  u_core/u_core/u_fetch/ctmTdsLR_2_65466/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.27     12.02 r
+  u_core/u_core/u_fetch/ctmTdsLR_1_65465/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.27     12.29 f
+  u_core/u_core/gre_d_BUF_119_inst_96050/X (sky130_fd_sc_hd__buf_6)
+                                                   0.42     12.71 f
+  u_core/u_core/u_mmu/ctmTdsLR_1_92684/Y (sky130_fd_sc_hd__nand2b_4)
+                                                   0.19     12.90 r
+  u_core/u_core/u_mmu/ctmTdsLR_1_60469/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.26     13.16 f
+  u_core/u_core/u_mmu/gre_d_INV_169_inst_95599/Y (sky130_fd_sc_hd__clkinv_8)
+                                                   0.28     13.44 r
+  u_core/u_core/u_mmu/gre_d_INV_68_f_inst_95597/Y (sky130_fd_sc_hd__inv_6)
+                                                   0.12     13.56 f
+  u_core/u_core/u_mmu/ropt_mt_inst_96616/X (sky130_fd_sc_hd__buf_16)
+                                                   0.21     13.77 f
+  u_core/u_core/u_mmu/pte_entry_q_reg[13]/D (sky130_fd_sc_hd__dfrtp_4)
+                                                   3.01     16.78 f
+  data arrival time                                         16.78
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.81      9.81
+  u_core/u_core/u_mmu/pte_entry_q_reg[13]/CLK (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.00      9.81 r
+  clock uncertainty                               -0.14      9.67
+  library setup time                              -1.44      8.22
+  data required time                                         8.22
+  ------------------------------------------------------------------------
+  data required time                                         8.22
+  data arrival time                                        -16.78
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.56
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[18] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40969/X (sky130_fd_sc_hd__buf_6)
+                                                   0.43     16.36 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_75607/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     16.56 f
+  u_core/u_core/u_muldiv/U5300/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.30     16.86 r
+  u_core/u_core/u_muldiv/U5301/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.29     17.16 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_36188/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.20     17.36 r
+  u_core/u_core/u_muldiv/mult_result_q_reg[18]/D (sky130_fd_sc_hd__dfrbp_2)
+                                                   0.00     17.36 r
+  data arrival time                                         17.36
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[18]/CLK (sky130_fd_sc_hd__dfrbp_2)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.00      9.14
+  data required time                                         9.14
+  ------------------------------------------------------------------------
+  data required time                                         9.14
+  data arrival time                                        -17.36
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.23
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[25] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_80155/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.28     16.21 f
+  u_core/u_core/u_muldiv/U2059/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.25     16.46 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46693/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.15     16.61 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_26367/Y (sky130_fd_sc_hd__nor2_8)
+                                                   0.17     16.77 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_55122/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.41     17.19 f
+  u_core/u_core/u_muldiv/mult_result_q_reg[25]/D (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.01     17.20 f
+  data arrival time                                         17.20
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[25]/CLK (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.17      8.97
+  data required time                                         8.97
+  ------------------------------------------------------------------------
+  data required time                                         8.97
+  data arrival time                                        -17.20
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.22
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[27] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_80155/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.28     16.21 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_78355/Y (sky130_fd_sc_hd__inv_6)
+                                                   0.20     16.41 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_36569/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.12     16.54 f
+  u_core/u_core/u_muldiv/ctmTdsLR_2_44289/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.24     16.78 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_44288/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.40     17.18 f
+  u_core/u_core/u_muldiv/mult_result_q_reg[27]/D (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.01     17.19 f
+  data arrival time                                         17.19
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[27]/CLK (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.15      8.99
+  data required time                                         8.99
+  ------------------------------------------------------------------------
+  data required time                                         8.99
+  data arrival time                                        -17.19
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.20
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[16] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_55114/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.32     16.25 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_57043/Y (sky130_fd_sc_hd__inv_8)
+                                                   0.23     16.49 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_64367/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.14     16.63 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_62143/Y (sky130_fd_sc_hd__o211ai_2)
+                                                   0.13     16.76 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_55261/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.32     17.08 f
+  u_core/u_core/u_muldiv/U5223/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.21     17.28 r
+  u_core/u_core/u_muldiv/mult_result_q_reg[16]/D (sky130_fd_sc_hd__dfrbp_1)
+                                                   0.00     17.29 r
+  data arrival time                                         17.29
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[16]/CLK (sky130_fd_sc_hd__dfrbp_1)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.01      9.12
+  data required time                                         9.12
+  ------------------------------------------------------------------------
+  data required time                                         9.12
+  data arrival time                                        -17.29
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.16
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[19] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_55114/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.32     16.25 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_57043/Y (sky130_fd_sc_hd__inv_8)
+                                                   0.23     16.49 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_61701/Y (sky130_fd_sc_hd__o211ai_2)
+                                                   0.27     16.75 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_54799/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.28     17.03 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_36454/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18     17.20 f
+  u_core/u_core/u_muldiv/mult_result_q_reg[19]/D (sky130_fd_sc_hd__dfrbp_1)
+                                                   0.00     17.21 f
+  data arrival time                                         17.21
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[19]/CLK (sky130_fd_sc_hd__dfrbp_1)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.07      9.08
+  data required time                                         9.08
+  ------------------------------------------------------------------------
+  data required time                                         9.08
+  data arrival time                                        -17.21
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.13
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[24] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_54973/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.27     16.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_7435/Y (sky130_fd_sc_hd__inv_6)
+                                                   0.22     16.43 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_83221/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.12     16.54 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_83220/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.10     16.64 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82066/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.13     16.77 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_45359/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.21     16.98 r
+  u_core/u_core/u_muldiv/U5513/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.19     17.17 f
+  u_core/u_core/u_muldiv/mult_result_q_reg[24]/D (sky130_fd_sc_hd__dfrbp_1)
+                                                   0.00     17.18 f
+  data arrival time                                         17.18
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[24]/CLK (sky130_fd_sc_hd__dfrbp_1)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.08      9.06
+  data required time                                         9.06
+  ------------------------------------------------------------------------
+  data required time                                         9.06
+  data arrival time                                        -17.18
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.11
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_11939/X (sky130_fd_sc_hd__buf_4)
+                                                   0.49     16.42 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_61002/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.17     16.59 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_61001/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.11     16.70 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_80159/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.13     16.83 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_80158/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.22     17.05 r
+  u_core/u_core/u_muldiv/U5415/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.16     17.21 f
+  u_core/u_core/u_muldiv/mult_result_q_reg[21]/D (sky130_fd_sc_hd__dfrbp_2)
+                                                   0.00     17.21 f
+  data arrival time                                         17.21
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[21]/CLK (sky130_fd_sc_hd__dfrbp_2)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.04      9.10
+  data required time                                         9.10
+  ------------------------------------------------------------------------
+  data required time                                         9.10
+  data arrival time                                        -17.21
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.11
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[26] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/U5510/X (sky130_fd_sc_hd__buf_2)
+                                                   0.32     14.90 r
+  u_core/u_core/u_muldiv/U797/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.10     15.00 f
+  u_core/u_core/u_muldiv/U5561/Y (sky130_fd_sc_hd__a21oi_1)
+                                                   0.30     15.30 r
+  u_core/u_core/u_muldiv/U5564/X (sky130_fd_sc_hd__xor2_1)
+                                                   0.34     15.64 r
+  u_core/u_core/u_muldiv/U5565/Y (sky130_fd_sc_hd__nand2_1)
+                                                   1.02     16.66 f
+  u_core/u_core/u_muldiv/U5566/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.55     17.20 r
+  u_core/u_core/u_muldiv/mult_result_q_reg[26]/D (sky130_fd_sc_hd__dfrbp_2)
+                                                   0.00     17.21 r
+  data arrival time                                         17.21
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[26]/CLK (sky130_fd_sc_hd__dfrbp_2)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.02      9.12
+  data required time                                         9.12
+  ------------------------------------------------------------------------
+  data required time                                         9.12
+  data arrival time                                        -17.21
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.08
+
+
+
+  Startpoint: u_core/u_core/u_decode/inst_q_reg[21] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_core/u_core/u_muldiv/mult_result_q_reg[30] (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ss_100C_1v60
+  Scenario: func@ss_100C_1v60.setup
+  Path Group: reg2reg
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.84      1.84
+
+  u_core/u_core/u_decode/inst_q_reg[21]/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.00      1.84 r
+  u_core/u_core/u_decode/inst_q_reg[21]/Q (sky130_fd_sc_hd__dfrtp_1)
+                                                   0.99      2.83 f
+  u_core/u_core/u_decode/ZBUF_2_inst_2687/X (sky130_fd_sc_hd__buf_4)
+                                                   0.31      3.13 f
+  u_core/u_core/u_decode/HFSINV_767_2393/Y (sky130_fd_sc_hd__inv_4)
+                                                   0.20      3.33 r
+  u_core/u_core/u_decode/u_regfile/U228/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.24      3.57 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_4_14803/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.23      3.80 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_2_14801/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.23      4.03 f
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_59282/Y (sky130_fd_sc_hd__inv_16)
+                                                   0.38      4.40 r
+  u_core/u_core/u_decode/u_regfile/U1521/Y (sky130_fd_sc_hd__a22oi_1)
+                                                   1.75      6.15 f
+  u_core/u_core/u_decode/u_regfile/U1524/Y (sky130_fd_sc_hd__nand4_1)
+                                                   0.37      6.52 r
+  u_core/u_core/u_decode/u_regfile/ZBUF_2_inst_34214/X (sky130_fd_sc_hd__buf_6)
+                                                   0.32      6.84 r
+  u_core/u_core/u_decode/u_regfile/ctmTdsLR_1_37885/Y (sky130_fd_sc_hd__nor2_4)
+                                                   0.12      6.95 f
+  u_core/u_core/u_decode/u_regfile/gre_d_BUF_11_inst_94330/X (sky130_fd_sc_hd__buf_12)
+                                                   0.26      7.21 f
+  u_core/u_core/u_decode/u_regfile/U1532/Y (sky130_fd_sc_hd__nand2_8)
+                                                   0.47      7.68 r
+  u_core/u_core/u_decode/U96/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.18      7.87 f
+  u_core/u_core/u_decode/U86/Y (sky130_fd_sc_hd__nand3_4)
+                                                   0.17      8.04 r
+  u_core/u_core/u_muldiv/ZBUF_271_inst_3747/X (sky130_fd_sc_hd__clkbuf_8)
+                                                   0.82      8.86 r
+  u_core/u_core/u_muldiv/U2351/Y (sky130_fd_sc_hd__xnor2_2)
+                                                   0.55      9.41 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_17186/Y (sky130_fd_sc_hd__o22ai_1)
+                                                   0.65     10.06 r
+  u_core/u_core/u_muldiv/U1816/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.43     10.48 r
+  u_core/u_core/u_muldiv/U1815/Y (sky130_fd_sc_hd__xnor2_1)
+                                                   0.24     10.72 f
+  u_core/u_core/u_muldiv/ctmTdsLR_3_62865/Y (sky130_fd_sc_hd__inv_1)
+                                                   0.11     10.84 r
+  u_core/u_core/u_muldiv/ctmTdsLR_2_62864/Y (sky130_fd_sc_hd__nand2_1)
+                                                   0.18     11.02 f
+  u_core/u_core/u_muldiv/ctmTdsLR_8_62870/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.17 r
+  u_core/u_core/u_muldiv/ctmTdsLR_7_62869/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     11.29 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_56060/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     11.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_24260/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.14     11.58 f
+  u_core/u_core/u_muldiv/U1239/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.31     11.89 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_72396/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.19     12.08 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46802/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.34     12.42 r
+  u_core/u_core/u_muldiv/U2604/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.22     12.64 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46780/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.30     12.94 r
+  u_core/u_core/u_muldiv/U2208/Y (sky130_fd_sc_hd__o21ai_2)
+                                                   0.20     13.14 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_82429/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.12     13.26 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_79912/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.39 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79915/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.13     13.52 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79673/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.13     13.65 f
+  u_core/u_core/u_muldiv/U4355/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.32     13.97 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_76713/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.20 f
+  u_core/u_core/u_muldiv/ctmTdsLR_1_40869/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     14.59 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_46706/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.23     14.82 f
+  u_core/u_core/u_muldiv/U4471/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.39     15.21 r
+  u_core/u_core/u_muldiv/U4657/Y (sky130_fd_sc_hd__o21ai_4)
+                                                   0.27     15.48 f
+  u_core/u_core/u_muldiv/U5036/Y (sky130_fd_sc_hd__a21oi_4)
+                                                   0.45     15.93 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_55278/X (sky130_fd_sc_hd__buf_4)
+                                                   0.51     16.44 r
+  u_core/u_core/u_muldiv/ctmTdsLR_5_79809/Y (sky130_fd_sc_hd__inv_2)
+                                                   0.15     16.59 f
+  u_core/u_core/u_muldiv/ctmTdsLR_4_79808/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.10     16.68 r
+  u_core/u_core/u_muldiv/ctmTdsLR_1_11588/Y (sky130_fd_sc_hd__nand3_2)
+                                                   0.14     16.82 f
+  u_core/u_core/u_muldiv/U5662/Y (sky130_fd_sc_hd__nand2_2)
+                                                   0.15     16.97 r
+  u_core/u_core/u_muldiv/U5668/Y (sky130_fd_sc_hd__nand2_4)
+                                                   0.17     17.15 f
+  u_core/u_core/u_muldiv/mult_result_q_reg[30]/D (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.00     17.15 f
+  data arrival time                                         17.15
+
+  clock clk (rise edge)                            7.00      7.00
+  clock network delay (propagated)                 2.28      9.28
+  u_core/u_core/u_muldiv/mult_result_q_reg[30]/CLK (sky130_fd_sc_hd__dfrtp_4)
+                                                   0.00      9.28 r
+  clock uncertainty                               -0.14      9.14
+  library setup time                              -0.06      9.08
+  data required time                                         9.08
+  ------------------------------------------------------------------------
+  data required time                                         9.08
+  data arrival time                                        -17.15
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -8.07
+
+
+1
